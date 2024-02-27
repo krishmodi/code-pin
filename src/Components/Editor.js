@@ -20,7 +20,6 @@ export default function Editor(props) {
     }
 
     return (
-        <div>
             <div className='editor-container'>
                 <div className='editor-title'>
                     {displayName}
@@ -30,16 +29,15 @@ export default function Editor(props) {
                 <ControlledEditor
                     onBeforeChange={handleChange}
                     value={value}
-                    className='code-mirror-wrapper'
+                    className='code-mirror-wrapper2'
                     options={{
                         lineWrapping: true,
                         lint: true,
-                        lineNumbers: true,
+                        mode: language,
                         theme: 'material',
-                        mode: language
+                        lineNumbers: true
                     }}
                 />
             </div>
-        </div>
     )
 }
